@@ -1,16 +1,213 @@
 ---
+import Layout from "../layouts/Layout.astro";
+
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<Layout title="ファッション・インテリア">
+	<div class="site-root">
+		<header class="nav">
+			<div class="nav-item">MENU</div>
+			<div class="nav-item">ONLINE SHOP</div>
+		</header>
+
+		<main>
+			<section class="hero-landing">
+				<div class="hero-top-title">Lorem Ipsum</div>
+				<div class="hero-inner">
+					<div class="side-image">
+						<img src="/assets/84da74bb-131e-4925-ae1c-96cdb5b8b6f7.png" alt="left" />
+					</div>
+					<div class="center-image">
+						<img src="/assets/d3946ccb-4a16-44f0-806d-11fd23def3b1.png" alt="center" />
+					</div>
+					<div class="side-image">
+						<img src="/assets/26695774-f548-4899-ad73-85954efd272e.png" alt="right" />
+					</div>
+				</div>
+				<div class="hero-big-text">Lorem Ipsum</div>
+			</section>
+
+			<section class="about-concept">
+				<div class="container">
+					<h2 style="color:var(--muted);font-size:18px;">ABOUT</h2>
+					<div class="two-col" style="margin-top:24px">
+						<div class="media">
+							<img src="/assets/b8edf86e-3423-4179-a4d7-31b7737cafa4.png" alt="about image" />
+						</div>
+						<div>
+							<h3 class="heading-xl">dolore eu<br/>fugiat nulla</h3>
+							<p class="copy">山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。</p>
+						</div>
+					</div>
+				</div>
+	
+				<div class="container">
+					<h2 style="color:var(--muted);font-size:18px;">CONCEPT</h2>
+					<div class="two-col" style="margin-top:24px;align-items:center">
+						<div>
+							<h3 class="heading-xl">dolore eu<br/>fugiat nulla</h3>
+							<p class="copy">山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。</p>
+						</div>
+						<div class="circle-hero">
+							<img src="/assets/d998f383-adf3-4782-986c-8895e62dcab9.png" alt="concept" style="width:100%;height:100%;object-fit:cover;display:block" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+						<section class="items">
+							<div class="items-circle" aria-hidden="true"></div>
+							<div class="container text-center">
+								<h3 style="color:var(--muted);font-size:18px;">consectetur adipisicing elit</h3>
+								<div class="photo-grid">
+								  <div class="photo-card">
+								    <img src="/assets/84da74bb-131e-4925-ae1c-96cdb5b8b6f7.png" alt="" />
+								    <div class="card-meta">
+								      <div class="meta-title">laboris nisi ut aliquip</div>
+								      <div class="meta-list">
+								        <span>NEW</span>
+								        <span>item</span>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="photo-card">
+								    <img src="/assets/d3946ccb-4a16-44f0-806d-11fd23def3b1.png" alt="" />
+								    <div class="card-meta">
+								      <div class="meta-title">Lorem Ipsum</div>
+								      <div class="meta-list">
+								        <span>NEW</span>
+								        <span>item</span>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="photo-card">
+								    <img src="/assets/26695774-f548-4899-ad73-85954efd272e.png" alt="" />
+								    <div class="card-meta">
+								      <div class="meta-title">reprehenderit in voluptate</div>
+								      <div class="meta-list">
+								        <span>NEW</span>
+								        <span>item</span>
+								      </div>
+								    </div>
+								  </div>
+								  <div class="photo-card">
+								    <img src="/assets/4308a2f0-a4ae-4278-a93d-291442535f20.png" alt="" />
+								    <div class="card-meta">
+								      <div class="meta-title">Lorem ipsum</div>
+								      <div class="meta-list">
+								        <span>NEW</span>
+								        <span>item</span>
+								      </div>
+								    </div>
+								  </div>
+								</div>
+							</div>
+						</section>
+
+						<section class="designer">
+							<div class="container">
+								<div class="designer-inner">
+									<div class="designer-photo" style="width:478px;height:478px;border-radius:50%;overflow:hidden">
+										<img src="/assets/4308a2f0-a4ae-4278-a93d-291442535f20.png" alt="designer" style="width:100%;height:100%;object-fit:cover;display:block" />
+									</div>
+									<div class="bio">
+										<p>山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。</p>
+										<p class="name"><span style="font-weight:500;font-size:18px">斎藤 ミア</span> <span>/</span> <span style="font-weight:500;font-size:15px">MIA SAITO</span></p>
+									</div>
+								</div>
+
+								<!-- TOPICS を designer セクション内に移動 -->
+								<div class="topics">
+									<div class="topics-box">
+										<div class="topics-header">
+											<div class="line"></div>
+											<div class="star">✦</div>
+											<div class="line"></div>
+										</div>
+										<h3 class="topics-title">TOPICS</h3>
+										<div class="topic-cards">
+											<div class="topic-card">
+												<div class="topic-image">
+													<img src="/assets/b8edf86e-3423-4179-a4d7-31b7737cafa4.png" alt="topic 1" />
+												</div>
+												<h4 class="topic-name">consectetur adipisicing</h4>
+												<p class="topic-desc">山路を登りながら、こう考えた。智に働けば角が立つ。</p>
+											</div>
+											<div class="topic-card">
+												<div class="topic-image">
+													<img src="/assets/d998f383-adf3-4782-986c-8895e62dcab9.png" alt="topic 2" />
+												</div>
+												<h4 class="topic-name">consectetur</h4>
+												<p class="topic-desc">山路を登りながら、こう考えた。智に働けば角が立つ。</p>
+											</div>
+											<div class="topic-card">
+												<div class="topic-image">
+													<img src="/assets/4308a2f0-a4ae-4278-a93d-291442535f20.png" alt="topic 3" />
+												</div>
+												<h4 class="topic-name">commodo consequat</h4>
+												<p class="topic-desc">山路を登りながら、こう考えた。智に働けば角が立つ。</p>
+											</div>
+										</div>
+										<div class="topics-cta">
+											<button class="circle-btn" aria-label="more topics">→</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section class="follow-strip">
+							<div class="follow-inner container">
+								<div class="follow-col">
+									<img src="/assets/84da74bb-131e-4925-ae1c-96cdb5b8b6f7.png" alt="follow 1" />
+								</div>
+								<div class="follow-col">
+									<img src="/assets/b8edf86e-3423-4179-a4d7-31b7737cafa4.png" alt="follow 2" />
+								</div>
+								<div class="follow-center">
+									<div class="icon">📷</div>
+									<div class="label">FOLLOW US</div>
+								</div>
+								<div class="follow-col">
+									<img src="/assets/d3946ccb-4a16-44f0-806d-11fd23def3b1.png" alt="follow 4" />
+								</div>
+								<div class="follow-col">
+									<img src="/assets/26695774-f548-4899-ad73-85954efd272e.png" alt="follow 5" />
+								</div>
+							</div>
+						</section>
+
+						<section class="contact">
+							<div class="container">
+								<div class="contact-inner">
+									<div class="left">
+										<img src="/assets/504d1f2b-42fe-471e-a2d1-bb52c670f302.png" alt="logo" style="width:243.6px;height:40.8px;object-fit:contain"/>
+									</div>
+									<div class="right">
+										<h2> Lorem ipsum<br/>dolor sit<br/>amet</h2>
+										<div style="margin-top:12px;">
+											<p style="margin:0 0 8px">CONTACT</p>
+											<div style="width:415px;height:1px;background:var(--accent)"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						</section>
+
+						
+
+						<footer>
+							<nav class="foot-nav">
+								<div>ABOUT</div>
+								<div>CONCEPT</div>
+								<div>ITEMS</div>
+							</nav>
+							<p>©webdesign pro</p>
+						</footer>
+					</main>
+				</div>
+			</Layout>
