@@ -1,83 +1,157 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import styles from "./index.module.css";
+import ItemCard from "../components/ItemCard.astro";
+
+const itemsData = [
+  {
+    imageSrc: "/assets/items1.png",
+    title: "laboris nisi ut aliquip",
+    items: [
+      "laboris nisi ut aliquip",
+      "laboris nisi ut aliquip",
+      "laboris nisi ut aliquip",
+    ],
+  },
+  {
+    imageSrc: "/assets/items2.png",
+    title: "Lorem Ipsum",
+    items: [
+      "laboris nisi ut aliquip",
+      "laboris nisi ut aliquip",
+      "laboris nisi ut aliquip",
+    ],
+  },
+  {
+    imageSrc: "/assets/items3.png",
+    title: "reprehenderit in voluptate",
+    items: [
+      "laboris nisi ut aliquip",
+      "laboris nisi ut aliquip",
+      "laboris nisi ut aliquip",
+    ],
+  },
+  {
+    imageSrc: "/assets/items4.png",
+    title: "Lorem ipsum",
+    items: [
+      "laboris nisi ut aliquip",
+      "laboris nisi ut aliquip",
+      "laboris nisi ut aliquip",
+    ],
+  },
+];
 ---
 
 <Layout title="ファッション・インテリア">
   <div class="site-root">
     <header class="nav">
       <div class="nav-item">MENU</div>
-      <h1>Lorem Ipsum</h1>
+      <img class="" src="/assets/logo.svg" alt="logo" />
       <div class="nav-item">ONLINE SHOP</div>
     </header>
 
     <main>
       <section class="hero-landing">
-        <div class="hero-inner">
-          <div class="side-image">
-            <img src="/assets/hero_img1.png" alt="left" />
-          </div>
-          <div class="center-image">
-            <img src="/assets/hero_img2.png" alt="center" />
-          </div>
-          <div class="side-image">
-            <img src="/assets/hero_img3.png" alt="right" />
-          </div>
+        <div class="hero-inner overflow-hidden mt-[110px]">
+          <ul class={styles.siderImage}>
+            <li><img src="/assets/hero_img1.png" alt="left" /></li>
+            <li><img src="/assets/hero_img2.png" alt="center" /></li>
+            <li><img src="/assets/hero_img3.png" alt="right" /></li>
+          </ul>
         </div>
         <div class="hero-big-text">Lorem Ipsum</div>
-        <p class="text-center">consectetur adipisicing elit</p>
+        <p class="text-center mt-[30px]">consectetur adipisicing elit</p>
       </section>
 
-      <section class="about-concept">
-        <div class="container">
-          <h2 style="color:var(--muted);font-size:18px;">ABOUT</h2>
+      <section class="about-concept py-[90px] px-[10%]">
+        <div class="">
           <div class="two-col" style="margin-top:24px">
-            <div>
-              <div class="media">
-                <img src="/assets/about_img.png" alt="about image" />
-              </div>
-              <div class="ellipse"></div>
+            <div class="w-[60%] relative">
+              <p class="text-[90px] text-[#fff] absolute z-20">
+                Lorem<br />
+                Ipsum
+              </p>
+              <img
+                class="w-[100%] relative z-10"
+                src="/assets/about_img.png"
+                alt="about image"
+              />
+              <div class="ellipse absolute top-[0px] z-1"></div>
 
               <style>
                 .ellipse {
-                  width: 200px;
-                  height: 100px;
-                  background: #ff6b6b;
+                  max-width: 80%;
+                  max-height: 100%;
+                  width: 500px;
+                  height: 600px;
+                  transform: rotate(60deg);
+                  opacity: 0.4;
+                  background: #fff;
                   border-radius: 50%; /* これだけで楕円！ */
                 }
               </style>
             </div>
 
-            <div>
+            <div class="w-[40%]">
+              <h2
+                class={styles.sectionSubtitle}
+                style="color:var(--muted);font-size:18px;"
+              >
+                ABOUT
+              </h2>
               <h3 class="heading-xl">dolore eu<br />fugiat nulla</h3>
               <p class="copy">
                 山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。
               </p>
+              <button class={` ${styles.transitionButton}`}>
+                <img src="/assets/arrow.svg" alt="" />
+              </button>
             </div>
           </div>
         </div>
 
-        <div class="container">
-          <h2 style="color:var(--muted);font-size:18px;">CONCEPT</h2>
-          <div class="two-col" style="margin-top:24px;align-items:center">
-            <div>
-              <h3 class="heading-xl">dolore eu<br />fugiat nulla</h3>
+        <div class="">
+          <div class="two-col" style="margin-top:24px">
+            <div class="w-[40%]">
+              <h2
+                class={styles.sectionSubtitle}
+                style="color:var(--muted);font-size:18px;"
+              >
+                CONCEPT
+              </h2>
+              <h3 class="heading-xl">
+                dolore eu<br />fugiat nulla
+              </h3>
               <p class="copy">
                 山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。
               </p>
+              <button class={` ${styles.transitionButton}`}>
+                <img src="/assets/arrow.svg" alt="" />
+              </button>
             </div>
-            <div class="circle-hero">
+
+            <div class="w-[60%] relative flex justify-end">
+              <p class="text-[90px] text-[#fff] absolute z-20">
+                Lorem<br />
+                Ipsum
+              </p>
               <img
+                class="w-[100%] relative z-10"
                 src="/assets/concept_img.png"
-                alt="concept"
-                style="width:100%;height:100%;object-fit:cover;display:block"
+                alt="concept image"
               />
-              <div class="ellipse"></div>
+              <div class="ellipse absolute top-[0px] z-1"></div>
 
               <style>
                 .ellipse {
-                  width: 200px;
-                  height: 100px;
-                  background: #ff6b6b;
+                  max-width: 80%;
+                  max-height: 100%;
+                  width: 500px;
+                  height: 600px;
+                  transform: rotate(60deg);
+                  opacity: 0.4;
+                  background: #fff;
                   border-radius: 50%; /* これだけで楕円！ */
                 }
               </style>
@@ -86,118 +160,68 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </section>
 
-      <section class="items">
-        <div class="items-circle" aria-hidden="true"></div>
-        <div class="container text-center">
-          <h1>Lorem Ipsum</h1>
-          <h2 style="color:var(--muted);font-size:18px;">
-            consectetur adipisicing elit
-          </h2>
-          <div class="photo-grid">
-            <div class="photo-card">
-              <img src="/assets/items1.png" alt="" />
-              <div class="card-meta">
-                <div class="meta-title">laboris nisi ut aliquip</div>
-                <div class="meta-list">
-                  <span>NEW</span>
-                  <span>item</span>
-                </div>
-              </div>
-            </div>
-            <div class="photo-card">
-              <img src="/assets/items2.png" alt="" />
-              <div class="card-meta">
-                <div class="meta-title">Lorem Ipsum</div>
-                <div class="meta-list">
-                  <span>NEW</span>
-                  <span>item</span>
-                </div>
-              </div>
-            </div>
-            <div class="photo-card">
-              <img src="/assets/items3.png" alt="" />
-              <div class="card-meta">
-                <div class="meta-title">reprehenderit in voluptate</div>
-                <div class="meta-list">
-                  <span>NEW</span>
-                  <span>item</span>
-                </div>
-              </div>
-            </div>
-            <div class="photo-card">
-              <img src="/assets/items4.png" alt="" />
-              <div class="card-meta">
-                <div class="meta-title">Lorem ipsum</div>
-                <div class="meta-list">
-                  <span>NEW</span>
-                  <span>item</span>
-                </div>
-              </div>
-            </div>
+      <section class="items pb-[180px]">
+        <div class="text-center">
+          <div class="relative">
+            <!-- 円を背景に配置 -->
+            <div class={styles.itemsCircle} aria-hidden="true"></div>
+            <!-- テキストを前面に配置 -->
+            <h1 class="text-[135px] relative z-10">Lorem Ipsum</h1>
+            <h2 class="text-[105px] relative z-10">
+              consectetur adipisicing elit
+            </h2>
+          </div>
+
+          <div class={`px-[10%] ${styles.itemsList}`}>
+            {
+              itemsData.map((item) => (
+                <ItemCard
+                  imageSrc={item.imageSrc}
+                  title={item.title}
+                  items={item.items}
+                />
+              ))
+            }
           </div>
         </div>
       </section>
 
-      <section class="designer">
-        <div class="container">
-          <div class="designer-inner relative" style="position:relative;">
-            <h1
-              class="absolute top-0 left-0 text-[186px] whitespace-nowrap sliding-text text-white"
-            >
-              Lorem Ipsum
-            </h1>
-            <div
-              class="designer-photo relative"
-              style="width:478px;height:478px;border-radius:50%;overflow:hidden"
-            >
-              <img
-                src="/assets/loop.png"
-                alt=""
-                class="absolute top-0 left-0"
-                style="width:100%;height:100%;object-fit:cover;display:block"
-              />
-              <img
-                src="/assets/mia.png"
-                alt="designer"
-                style="width:100%;height:100%;object-fit:cover;display:block"
-              />
+      <section class="designer py-[180px]">
+        <div class="">
+          <div class={`relative overflow-hidden  ${styles.first}`}>
+            <div class={`absolute ${styles.designerTitleContainer}`}>
+              <h1 class={styles.designerTitle}>Lorem Ipsum</h1>
+              <h1 class={styles.designerTitle}>Lorem Ipsum</h1>
             </div>
-            <div class="bio">
-              <p>
-                山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。
-              </p>
-              <p class="name">
-                <span style="font-weight:500;font-size:18px">斎藤 ミア</span>
-                <span>/</span>
-                <span style="font-weight:500;font-size:15px">MIA SAITO</span>
-              </p>
+            <div class="px-[10%] flex items-end">
+              <div class={`relative  ${styles.designerPhoto}`}>
+                <img src="/assets/loop.png" alt="" class={styles.loopImage} />
+                <img
+                  src="/assets/mia.png"
+                  alt="designer"
+                  class={`relative ${styles.miaImage}`}
+                />
+              </div>
+              <div class="bio">
+                <p>
+                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。
+                </p>
+                <p class="name">
+                  <span style="font-weight:500;font-size:18px">斎藤 ミア</span>
+                  <span>/</span>
+                  <span style="font-weight:500;font-size:15px">MIA SAITO</span>
+                </p>
+              </div>
             </div>
           </div>
-
-          <style>
-            .sliding-text {
-              animation: slideText 10s linear infinite;
-            }
-
-            @keyframes slideText {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-100%);
-              }
-            }
-          </style>
 
           <!-- TOPICS を designer セクション内に移動 -->
-          <div class="topics">
+          <div class="second topics px-[10%] pt-[140px]">
             <div class="topics-box">
-              <div class="topics-header">
-                <div class="line"></div>
-                <div class="star">✦</div>
-                <div class="line"></div>
+              <div class="topics-header"></div>
+              <div class={styles.topicsTitleContainer}>
+                <h3 class={styles.topicsTitle}>TOPICS</h3>
               </div>
-              <h3 class="topics-title">TOPICS</h3>
               <div class="topic-cards">
                 <div class="topic-card">
                   <div class="topic-image">
@@ -227,8 +251,10 @@ import Layout from "../layouts/Layout.astro";
                   </p>
                 </div>
               </div>
-              <div class="topics-cta">
-                <button class="circle-btn" aria-label="more topics">→</button>
+              <div class={styles.topicBottom}>
+                <button class={` ${styles.transitionButton2}`}>
+                  <img src="/assets/arrow.svg" alt="" />
+                </button>
               </div>
             </div>
           </div>
@@ -236,7 +262,7 @@ import Layout from "../layouts/Layout.astro";
       </section>
 
       <section class="follow-strip">
-        <div class="follow-inner container overflow-hidden">
+        <div class="follow-inner overflow-hidden">
           <ul class="follow-list flex">
             <li class="follow-col">
               <img src="/assets/footer-item1.png" alt="follow 1" />
@@ -267,12 +293,12 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </section>
 
-      <section class="contact">
-        <div class="container">
+      <section class="contact pt-[108px] px-[10%] pb-[70px] !h-fit">
+        <div class={`flex flex-col w-[100%] !h-fit ${styles.first}`}>
           <div class="contact-inner">
-            <div class="left flex flex-col">
-              <p>Lorem Ipsum</p>
-              <nav class="foot-nav">
+            <div class={styles.contactLeft}>
+              <img class="" src="/assets/logo.svg" alt="logo" />
+              <nav class="foot-nav flex gap-[30px] mt-[30px]">
                 <div>ABOUT</div>
                 <div>CONCEPT</div>
                 <div>ITEMS</div>
@@ -280,16 +306,19 @@ import Layout from "../layouts/Layout.astro";
             </div>
             <div class="right">
               <h2>Lorem ipsum<br />dolor sit<br />amet</h2>
-              <div style="margin-top:12px;">
-                <p style="margin:0 0 8px">CONTACT</p>
-                <div style="width:415px;height:1px;background:var(--accent)">
-                </div>
+              <div
+                class="mt-[12px] flex justify-between border-b border-[var(--accent)] pb-[10px]"
+              >
+                <p class="my-0 mb-2">CONTACT</p>
+                <img class="w-[20px]" src="/assets/arrow.svg" alt="" />
               </div>
             </div>
           </div>
-          <footer>
-            <p class="text-right">©webdesign pro</p>
-          </footer>
+          <div class={styles.second}>
+            <footer>
+              <p class="text-right mt-[74px]">©webdesign pro</p>
+            </footer>
+          </div>
         </div>
       </section>
     </main>

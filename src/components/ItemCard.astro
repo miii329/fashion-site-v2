@@ -1,0 +1,116 @@
+---
+export interface Props {
+  imageSrc: string;
+  title: string;
+  items: string[];
+}
+
+const { imageSrc, title, items } = Astro.props;
+---
+
+<div class="itemCard relative">
+  <img src={imageSrc} alt="" />
+  <div class="itemMeta">
+    <div class="itemTitle absolute top-[0px] right-[0px] text-white">
+      {
+        title
+          .split("")
+          .map((char) => (
+            <span style="transform: rotate(90deg); display: inline-block;">
+              {char}
+            </span>
+          ))
+      }
+    </div>
+    <div class="itemList">
+      <ul>
+        {
+          items.map((item) => (
+            <li class="flex">
+              <span>NEW</span>
+              <p>{item}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  .itemoCard {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .itemCard:nth-child(even) {
+    margin-top: 100px;
+  }
+
+  .itemCard:hover {
+    transform: translateY(-4px);
+  }
+
+  .itemCard img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+  }
+
+  .itemMeta {
+    padding: 16px;
+  }
+
+  .itemTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #fff;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+
+  .itemList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    span {
+      background-color: #000;
+    }
+  }
+
+  .itemList ul {
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .itemList li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .itemList li p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .itemList span {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+</style>

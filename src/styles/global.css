@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+p {
+  margin: 0;
+}
+
 ul,
 ol {
   list-style: none;
@@ -85,6 +89,14 @@ body {
   top: 232px;
   transform: translateX(-50%);
 }
+.topics-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px 40px;
+  border-left: 1px solid #242120;
+  border-right: 1px solid #242120;
+}
 .hero .hero-sub {
   position: absolute;
   left: 50%;
@@ -103,7 +115,6 @@ body {
 }
 .hero-landing .hero-inner {
   max-width: var(--max-width);
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 160px 1fr 160px;
   align-items: center;
@@ -156,7 +167,6 @@ body {
 @media (max-width: 900px) {
   .hero-landing .hero-inner {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
   .hero-landing .center-image {
     width: 100%;
@@ -236,7 +246,7 @@ body {
     padding: 0 24px;
   }
 }
-.photo-grid {
+.items-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
@@ -296,7 +306,7 @@ body {
 }
 
 @media (max-width: 900px) {
-  .photo-grid {
+  .items-list {
     grid-template-columns: 1fr;
   }
   .photo-card img {
@@ -338,7 +348,6 @@ body {
 
 /* Designer section */
 .designer {
-  padding: 80px 130px;
   background: #f4f4f4;
 }
 .designer .bio {
@@ -352,12 +361,7 @@ body {
 }
 
 /* layout helpers for designer/contact */
-.designer-inner {
-  display: flex;
-  gap: 48px;
-  align-items: center;
-  justify-content: space-between;
-}
+
 .designer-photo {
   flex: 0 0 auto;
 }
@@ -370,7 +374,7 @@ body {
   gap: 40px;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 0;
+  align-items: flex-start;
 }
 .contact .left {
   flex: 0 0 260px;
@@ -411,7 +415,6 @@ body {
 }
 .contact .right {
   flex: 1;
-  padding: 40px 100px;
 }
 .contact h2 {
   font-size: 70px;
@@ -441,15 +444,11 @@ footer p {
 }
 
 /* TOPICS section */
-.topics {
-  padding: 64px 0;
-  background: transparent;
-}
+
 .topics-box {
   max-width: 980px;
   margin: 0 auto;
-  background: #fff;
-  border: 1px solid #e9e9e9;
+  border: 1px solid #242120;
   border-radius: 8px;
   padding: 40px 36px 28px;
   position: relative;
@@ -489,12 +488,8 @@ footer p {
   text-align: center;
 }
 .topic-image {
-  width: 120px;
-  height: 120px;
   margin: 0 auto 18px;
-  border-radius: 50%;
   overflow: hidden;
-  background: #f6f6f6;
 }
 .topic-image img {
   width: 100%;
@@ -535,7 +530,6 @@ footer p {
 .follow-list {
   display: flex;
   animation: slideScroll 20s linear infinite;
-  gap: 20px;
 }
 
 .follow-col {
