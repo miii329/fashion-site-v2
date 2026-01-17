@@ -30,8 +30,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 618px;
-  height: 618px;
+  width: 115%;
+  height: auto;
   object-fit: cover;
   display: block;
   animation: rotate 30s linear infinite;
@@ -116,6 +116,12 @@
   width: 478px;
   height: 478px;
   border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .designerPhoto {
+    width: 120%;
+  }
 }
 
 .designerFlexContainer {

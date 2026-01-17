@@ -53,6 +53,12 @@ const { imageSrc, title, items } = Astro.props;
     margin-top: 100px;
   }
 
+  @media (max-width: 768px) {
+    .itemCard:nth-child(even) {
+      margin-top: 0;
+    }
+  }
+
   .itemCard:hover {
     transform: translateY(-4px);
   }
@@ -64,7 +70,7 @@ const { imageSrc, title, items } = Astro.props;
   }
 
   .itemMeta {
-    padding: 16px;
+    padding: 24px 0;
   }
 
   .itemTitle {
