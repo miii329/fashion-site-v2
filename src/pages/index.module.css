@@ -10,6 +10,14 @@
   z-index: 0;
 }
 
+.itemsMainTitle {
+  font-size: clamp(40px, 8vw, 105px);
+}
+
+.itemsSubtitle {
+  font-size: clamp(40px, 8vw, 85px);
+}
+
 .itemsList {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -108,6 +116,13 @@
   width: 478px;
   height: 478px;
   border-radius: 50%;
+}
+
+.designerFlexContainer {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .contactLeft {
@@ -225,8 +240,45 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 900px) {
+.topicCards {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 12px 20px;
+}
+
+.twoCol {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .itemsCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(418px, 100vw); /* 418pxまたは画面幅の80%の小さい方 */
+    height: min(418px, 100vw); /* 同じ値で正円を維持 */
+    border-radius: 50%;
+    background: rgba(246, 190, 206, 0.7);
+    z-index: 0;
+  }
   .itemsList {
     grid-template-columns: 1fr;
+  }
+  .twoCol {
+    flex-direction: column;
+  }
+
+  .topicCards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .designerFlexContainer {
+    flex-direction: column;
   }
 }

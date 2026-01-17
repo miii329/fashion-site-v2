@@ -66,7 +66,7 @@ const itemsData = [
 
       <section class="about-concept py-[90px] px-[10%]">
         <div class="">
-          <div class="two-col" style="margin-top:24px">
+          <div class={styles.twoCol}>
             <div class="w-[60%] relative">
               <p class="text-[90px] text-[#fff] absolute z-20">
                 Lorem<br />
@@ -112,8 +112,8 @@ const itemsData = [
         </div>
 
         <div class="">
-          <div class="two-col" style="margin-top:24px">
-            <div class="w-[40%]">
+          <div class={styles.twoCol} style="margin-top:24px">
+            <div class="w-[40%] md:w-[100%]">
               <h2
                 class={styles.sectionSubtitle}
                 style="color:var(--muted);font-size:18px;"
@@ -166,8 +166,10 @@ const itemsData = [
             <!-- 円を背景に配置 -->
             <div class={styles.itemsCircle} aria-hidden="true"></div>
             <!-- テキストを前面に配置 -->
-            <h1 class="text-[135px] relative z-10">Lorem Ipsum</h1>
-            <h2 class="text-[105px] relative z-10">
+            <h1 class={`text-[135px] relative z-10 ${styles.itemsMainTitle}`}>
+              Lorem Ipsum
+            </h1>
+            <h2 class={`text-[105px] relative z-10 ${styles.itemsSubtitle}`}>
               consectetur adipisicing elit
             </h2>
           </div>
@@ -193,7 +195,7 @@ const itemsData = [
               <h1 class={styles.designerTitle}>Lorem Ipsum</h1>
               <h1 class={styles.designerTitle}>Lorem Ipsum</h1>
             </div>
-            <div class="px-[10%] flex items-end">
+            <div class={`px-[10%] ${styles.designerFlexContainer}`}>
               <div class={`relative  ${styles.designerPhoto}`}>
                 <img src="/assets/loop.png" alt="" class={styles.loopImage} />
                 <img
@@ -222,7 +224,7 @@ const itemsData = [
               <div class={styles.topicsTitleContainer}>
                 <h3 class={styles.topicsTitle}>TOPICS</h3>
               </div>
-              <div class="topic-cards">
+              <div class={styles.topicCards}>
                 <div class="topic-card">
                   <div class="topic-image">
                     <img src="/assets/topic1.png" alt="topic 1" />

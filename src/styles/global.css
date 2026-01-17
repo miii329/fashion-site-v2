@@ -188,11 +188,7 @@ body {
 .about-concept {
   background: #acd0f4;
 }
-.two-col {
-  display: flex;
-  gap: 64px;
-  align-items: flex-start;
-}
+
 .media {
   width: 683px;
   height: 597px;
@@ -365,9 +361,6 @@ body {
 .designer-photo {
   flex: 0 0 auto;
 }
-.designer .bio {
-  flex: 1 1 420px;
-}
 
 .contact-inner {
   display: flex;
@@ -476,13 +469,7 @@ footer p {
   color: var(--muted);
   letter-spacing: 2px;
 }
-.topic-cards {
-  display: flex;
-  gap: 48px;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 12px 20px;
-}
+
 .topic-card {
   width: 240px;
   text-align: center;
