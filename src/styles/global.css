@@ -3,6 +3,7 @@
   --accent: #242120;
   --muted: #433e3d;
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,14 +17,27 @@
 * {
   box-sizing: border-box;
 }
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 html,
 body {
   height: 100%;
 }
 body {
   margin: 0;
-  font-family: Inter, "Zen Kaku Gothic New", system-ui, -apple-system,
-    "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+  font-family:
+    Inter,
+    "Zen Kaku Gothic New",
+    system-ui,
+    -apple-system,
+    "Hiragino Kaku Gothic ProN",
+    "メイリオ",
+    sans-serif;
   color: var(--accent);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -406,9 +420,7 @@ body {
 }
 
 /* Footer */
-footer {
-  padding: 50px 0;
-}
+
 footer .foot-nav {
   display: flex;
   justify-content: center;
@@ -519,13 +531,43 @@ footer p {
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
-  .topic-cards {
-    flex-direction: column;
-    gap: 24px;
-    padding: 0 12px;
+/* Slider animation */
+.follow-list {
+  display: flex;
+  animation: slideScroll 20s linear infinite;
+}
+
+.follow-col {
+  flex-shrink: 0;
+}
+
+.follow-col img {
+  width: 285px;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes slideScroll {
+  0% {
+    transform: translateX(0);
   }
-  .topic-card {
-    width: 100%;
+  100% {
+    transform: translateX(-100%);
   }
+}
+
+/* Duplicate items for seamless loop */
+.follow-list li:nth-child(1),
+.follow-list li:nth-child(2),
+.follow-list li:nth-child(3),
+.follow-list li:nth-child(4) {
+  visibility: visible;
+}
+
+.follow-list li:nth-child(5),
+.follow-list li:nth-child(6),
+.follow-list li:nth-child(7),
+.follow-list li:nth-child(8) {
+  visibility: visible;
 }

@@ -23,6 +23,26 @@ const { title } = Astro.props;
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 			@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
+			
+			/* Remove list markers */
+			.follow-list {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				gap: 20px;
+			}
+			
+			.follow-col {
+				margin: 0;
+			}
+			
+			.follow-col img {
+				width: 285px;
+				height: 380px;
+				object-fit: cover;
+				display: block;
+			}
 		</style>
 	</head>
 	<body>

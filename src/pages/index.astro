@@ -9,33 +9,47 @@ import Layout from "../layouts/Layout.astro";
 	<div class="site-root">
 		<header class="nav">
 			<div class="nav-item">MENU</div>
+			<h1>Lorem Ipsum</h1>
 			<div class="nav-item">ONLINE SHOP</div>
 		</header>
 
 		<main>
 			<section class="hero-landing">
-				<div class="hero-top-title">Lorem Ipsum</div>
 				<div class="hero-inner">
 					<div class="side-image">
-						<img src="/assets/84da74bb-131e-4925-ae1c-96cdb5b8b6f7.png" alt="left" />
+						<img src="/assets/hero_img1.png" alt="left" />
 					</div>
 					<div class="center-image">
-						<img src="/assets/d3946ccb-4a16-44f0-806d-11fd23def3b1.png" alt="center" />
+						<img src="/assets/hero_img2.png" alt="center" />
 					</div>
 					<div class="side-image">
-						<img src="/assets/26695774-f548-4899-ad73-85954efd272e.png" alt="right" />
+						<img src="/assets/hero_img3.png" alt="right" />
 					</div>
 				</div>
 				<div class="hero-big-text">Lorem Ipsum</div>
+				<p class="text-center">consectetur adipisicing elit</p>
 			</section>
 
 			<section class="about-concept">
 				<div class="container">
 					<h2 style="color:var(--muted);font-size:18px;">ABOUT</h2>
 					<div class="two-col" style="margin-top:24px">
-						<div class="media">
-							<img src="/assets/b8edf86e-3423-4179-a4d7-31b7737cafa4.png" alt="about image" />
+						<div>
+							<div class="media">
+							<img src="/assets/about_img.png" alt="about image" />
 						</div>
+															<div class="ellipse"></div>
+
+<style>
+  .ellipse {
+    width: 200px;
+    height: 100px;
+    background: #ff6b6b;
+    border-radius: 50%; /* これだけで楕円！ */
+  }
+</style>
+						</div>
+						
 						<div>
 							<h3 class="heading-xl">dolore eu<br/>fugiat nulla</h3>
 							<p class="copy">山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。</p>
@@ -51,7 +65,17 @@ import Layout from "../layouts/Layout.astro";
 							<p class="copy">山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。</p>
 						</div>
 						<div class="circle-hero">
-							<img src="/assets/d998f383-adf3-4782-986c-8895e62dcab9.png" alt="concept" style="width:100%;height:100%;object-fit:cover;display:block" />
+							<img src="/assets/concept_img.png" alt="concept" style="width:100%;height:100%;object-fit:cover;display:block" />
+																						<div class="ellipse"></div>
+
+<style>
+  .ellipse {
+    width: 200px;
+    height: 100px;
+    background: #ff6b6b;
+    border-radius: 50%; /* これだけで楕円！ */
+  }
+</style>
 						</div>
 					</div>
 				</div>
@@ -64,7 +88,7 @@ import Layout from "../layouts/Layout.astro";
 								<h3 style="color:var(--muted);font-size:18px;">consectetur adipisicing elit</h3>
 								<div class="photo-grid">
 								  <div class="photo-card">
-								    <img src="/assets/84da74bb-131e-4925-ae1c-96cdb5b8b6f7.png" alt="" />
+								    <img src="/assets/items1.png" alt="" />
 								    <div class="card-meta">
 								      <div class="meta-title">laboris nisi ut aliquip</div>
 								      <div class="meta-list">
@@ -74,7 +98,7 @@ import Layout from "../layouts/Layout.astro";
 								    </div>
 								  </div>
 								  <div class="photo-card">
-								    <img src="/assets/d3946ccb-4a16-44f0-806d-11fd23def3b1.png" alt="" />
+								    <img src="/assets/items2.png" alt="" />
 								    <div class="card-meta">
 								      <div class="meta-title">Lorem Ipsum</div>
 								      <div class="meta-list">
@@ -84,7 +108,7 @@ import Layout from "../layouts/Layout.astro";
 								    </div>
 								  </div>
 								  <div class="photo-card">
-								    <img src="/assets/26695774-f548-4899-ad73-85954efd272e.png" alt="" />
+								    <img src="/assets/items3.png" alt="" />
 								    <div class="card-meta">
 								      <div class="meta-title">reprehenderit in voluptate</div>
 								      <div class="meta-list">
@@ -94,7 +118,7 @@ import Layout from "../layouts/Layout.astro";
 								    </div>
 								  </div>
 								  <div class="photo-card">
-								    <img src="/assets/4308a2f0-a4ae-4278-a93d-291442535f20.png" alt="" />
+								    <img src="/assets/items4.png" alt="" />
 								    <div class="card-meta">
 								      <div class="meta-title">Lorem ipsum</div>
 								      <div class="meta-list">
@@ -109,15 +133,18 @@ import Layout from "../layouts/Layout.astro";
 
 						<section class="designer">
 							<div class="container">
-								<div class="designer-inner">
-									<div class="designer-photo" style="width:478px;height:478px;border-radius:50%;overflow:hidden">
-										<img src="/assets/4308a2f0-a4ae-4278-a93d-291442535f20.png" alt="designer" style="width:100%;height:100%;object-fit:cover;display:block" />
+								<div class="designer-inner relative">
+									<h1 class="absolute top-0 left-0 text-[186px] whitespace-nowrap">Lorem Ipsum</h1>
+									<div class="designer-photo relative" style="width:478px;height:478px;border-radius:50%;overflow:hidden">
+										<img src="/assets/loop.png" alt="" class="absolute top-0 left-0" style="width:100%;height:100%;object-fit:cover;display:block" />
+										<img src="/assets/mia.png" alt="designer" style="width:100%;height:100%;object-fit:cover;display:block" />
 									</div>
 									<div class="bio">
 										<p>山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。</p>
 										<p class="name"><span style="font-weight:500;font-size:18px">斎藤 ミア</span> <span>/</span> <span style="font-weight:500;font-size:15px">MIA SAITO</span></p>
 									</div>
 								</div>
+
 
 								<!-- TOPICS を designer セクション内に移動 -->
 								<div class="topics">
@@ -131,21 +158,21 @@ import Layout from "../layouts/Layout.astro";
 										<div class="topic-cards">
 											<div class="topic-card">
 												<div class="topic-image">
-													<img src="/assets/b8edf86e-3423-4179-a4d7-31b7737cafa4.png" alt="topic 1" />
+													<img src="/assets/topic1.png" alt="topic 1" />
 												</div>
 												<h4 class="topic-name">consectetur adipisicing</h4>
 												<p class="topic-desc">山路を登りながら、こう考えた。智に働けば角が立つ。</p>
 											</div>
 											<div class="topic-card">
 												<div class="topic-image">
-													<img src="/assets/d998f383-adf3-4782-986c-8895e62dcab9.png" alt="topic 2" />
+													<img src="/assets/topic2.png" alt="topic 2" />
 												</div>
 												<h4 class="topic-name">consectetur</h4>
 												<p class="topic-desc">山路を登りながら、こう考えた。智に働けば角が立つ。</p>
 											</div>
 											<div class="topic-card">
 												<div class="topic-image">
-													<img src="/assets/4308a2f0-a4ae-4278-a93d-291442535f20.png" alt="topic 3" />
+													<img src="/assets/topic3.png" alt="topic 3" />
 												</div>
 												<h4 class="topic-name">commodo consequat</h4>
 												<p class="topic-desc">山路を登りながら、こう考えた。智に働けば角が立つ。</p>
@@ -160,31 +187,48 @@ import Layout from "../layouts/Layout.astro";
 						</section>
 
 						<section class="follow-strip">
-							<div class="follow-inner container">
-								<div class="follow-col">
-									<img src="/assets/84da74bb-131e-4925-ae1c-96cdb5b8b6f7.png" alt="follow 1" />
-								</div>
-								<div class="follow-col">
-									<img src="/assets/b8edf86e-3423-4179-a4d7-31b7737cafa4.png" alt="follow 2" />
-								</div>
-								<div class="follow-center">
-									<div class="icon">📷</div>
-									<div class="label">FOLLOW US</div>
-								</div>
-								<div class="follow-col">
-									<img src="/assets/d3946ccb-4a16-44f0-806d-11fd23def3b1.png" alt="follow 4" />
-								</div>
-								<div class="follow-col">
-									<img src="/assets/26695774-f548-4899-ad73-85954efd272e.png" alt="follow 5" />
-								</div>
+							<div class="follow-inner container overflow-hidden">
+								<ul class="follow-list flex">
+									<li class="follow-col">
+										<img src="/assets/footer-item1.png" alt="follow 1" />
+									</li>
+									<li class="follow-col">
+										<img src="/assets/footer-item2.png" alt="follow 2" />
+									</li>
+									<li class="follow-col">
+										<img src="/assets/footer-item3.png" alt="follow 4" />
+									</li>
+									<li class="follow-col">
+										<img src="/assets/footer-item4.png" alt="follow 5" />
+									</li>
+									<!-- Duplicate for seamless loop -->
+									<li class="follow-col">
+										<img src="/assets/footer-item1.png" alt="follow 1" />
+									</li>
+									<li class="follow-col">
+										<img src="/assets/footer-item2.png" alt="follow 2" />
+									</li>
+									<li class="follow-col">
+										<img src="/assets/footer-item3.png" alt="follow 4" />
+									</li>
+									<li class="follow-col">
+										<img src="/assets/footer-item4.png" alt="follow 5" />
+									</li>
+								</ul>
 							</div>
 						</section>
 
 						<section class="contact">
 							<div class="container">
 								<div class="contact-inner">
-									<div class="left">
-										<img src="/assets/504d1f2b-42fe-471e-a2d1-bb52c670f302.png" alt="logo" style="width:243.6px;height:40.8px;object-fit:contain"/>
+									<div class="left flex flex-col">
+										<p>Lorem
+  Ipsum</p>
+										<nav class="foot-nav">
+					<div>ABOUT</div>
+								<div>CONCEPT</div>
+								<div>ITEMS</div>
+						</nav>
 									</div>
 									<div class="right">
 										<h2> Lorem ipsum<br/>dolor sit<br/>amet</h2>
@@ -194,20 +238,13 @@ import Layout from "../layouts/Layout.astro";
 										</div>
 									</div>
 								</div>
+								<footer>
+							<p class="text-right">©webdesign pro</p>
+						</footer>
 							</div>
 						</section>
-						</section>
 
-						
-
-						<footer>
-							<nav class="foot-nav">
-								<div>ABOUT</div>
-								<div>CONCEPT</div>
-								<div>ITEMS</div>
-							</nav>
-							<p>©webdesign pro</p>
-						</footer>
+					
 					</main>
 				</div>
 			</Layout>
