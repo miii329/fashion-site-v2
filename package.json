@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.18",
-    "autoprefixer": "^10.4.23"
+    "autoprefixer": "^10.4.23",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

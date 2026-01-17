@@ -535,6 +535,7 @@ footer p {
 .follow-list {
   display: flex;
   animation: slideScroll 20s linear infinite;
+  gap: 20px;
 }
 
 .follow-col {
