@@ -4,9 +4,7 @@
   --muted: #433e3d;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Global styles for the site (replaces Tailwind utilities used by the design) */
 :root {
@@ -152,7 +150,6 @@ body {
 .hero-landing .hero-inner {
   max-width: var(--max-width);
   display: grid;
-  grid-template-columns: 160px 1fr 160px;
   align-items: center;
   gap: 24px;
   padding: 0 24px;
@@ -456,10 +453,6 @@ footer .foot-nav {
   justify-content: center;
   gap: 90px;
   margin-bottom: 30px;
-}
-footer p {
-  margin: 0;
-  text-align: center;
 }
 
 /* Utility */

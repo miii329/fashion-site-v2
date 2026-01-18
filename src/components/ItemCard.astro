@@ -11,13 +11,13 @@ const { imageSrc, title, items } = Astro.props;
 <div class="itemCard relative">
   <img src={imageSrc} alt="" />
   <div class="itemMeta">
-    <div class="itemTitle absolute top-[0px] right-[0px] text-white">
+    <div class="itemTitle absolute top-[-25px] right-0">
       {
         title
           .split("")
           .map((char) => (
-            <span style="transform: rotate(90deg); display: inline-block;">
-              {char}
+            <span style="transform: rotate(90deg); display: inline-block; white-space: nowrap;">
+              {char === " " ? "\u00A0" : char}
             </span>
           ))
       }
@@ -77,9 +77,11 @@ const { imageSrc, title, items } = Astro.props;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 8px;
-    color: #fff;
+    color: #000;
     writing-mode: vertical-rl;
     text-orientation: upright;
+    font-weight: 400;
+    letter-spacing: -6.5px;
   }
 
   .itemList {

@@ -8,6 +8,19 @@
   border-radius: 50%;
   background: rgba(246, 190, 206, 0.7);
   z-index: 0;
+  animation: circleScale 3s ease-in-out infinite;
+}
+
+@keyframes circleScale {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
 }
 
 .itemsMainTitle {
@@ -79,7 +92,7 @@
 
 .topicsTitleContainer {
   position: absolute;
-  top: -40px;
+  top: -27px;
   right: 50%;
   transform: translateX(50%);
   background-color: #f4f4f4;
@@ -219,10 +232,13 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .transitionButton:hover {
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 
 .topicBottom {
@@ -240,10 +256,13 @@
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .transitionButton2:hover {
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 
 .topicCards {
