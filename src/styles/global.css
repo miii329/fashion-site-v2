@@ -91,7 +91,9 @@ body {
 
 @media (max-width: 768px) {
   .nav {
-    padding: 10px 10%;
+    padding: 5% 10%;
+    max-width: 100%;
+    width: fit-content;
   }
 
   .nav-items-mobile {
@@ -399,6 +401,12 @@ body {
   align-items: center;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .contact-inner {
+    gap: 30px;
+  }
 }
 
 .contact .left {

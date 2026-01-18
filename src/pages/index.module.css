@@ -151,6 +151,13 @@
   flex-direction: column;
 }
 
+@media (max-width: 768px) {
+  .contactLeft {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 .siderImage {
   display: flex;
   gap: 350px;
