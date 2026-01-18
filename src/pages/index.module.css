@@ -8,6 +8,27 @@
   border-radius: 50%;
   background: rgba(246, 190, 206, 0.7);
   z-index: 0;
+  animation: circleScale 3s ease-in-out infinite;
+}
+
+@keyframes circleScale {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.itemsMainTitle {
+  font-size: clamp(40px, 8vw, 105px);
+}
+
+.itemsSubtitle {
+  font-size: clamp(40px, 8vw, 85px);
 }
 
 .itemsList {
@@ -22,8 +43,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 618px;
-  height: 618px;
+  width: 115%;
+  height: auto;
   object-fit: cover;
   display: block;
   animation: rotate 30s linear infinite;
@@ -71,7 +92,7 @@
 
 .topicsTitleContainer {
   position: absolute;
-  top: -40px;
+  top: -27px;
   right: 50%;
   transform: translateX(50%);
   background-color: #f4f4f4;
@@ -110,11 +131,31 @@
   border-radius: 50%;
 }
 
+@media (max-width: 768px) {
+  .designerPhoto {
+    width: 120%;
+  }
+}
+
+.designerFlexContainer {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
 .contactLeft {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .contactLeft {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .siderImage {
@@ -198,10 +239,13 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .transitionButton:hover {
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 
 .topicBottom {
@@ -219,14 +263,54 @@
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .transitionButton2:hover {
-  transform: translateY(-2px);
+  transform: scale(1.05);
 }
 
-@media (max-width: 900px) {
+.topicCards {
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 12px 20px;
+}
+
+.twoCol {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .itemsCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(418px, 100vw); /* 418pxまたは画面幅の80%の小さい方 */
+    height: min(418px, 100vw); /* 同じ値で正円を維持 */
+    border-radius: 50%;
+    background: rgba(246, 190, 206, 0.7);
+    z-index: 0;
+  }
   .itemsList {
     grid-template-columns: 1fr;
+  }
+  .twoCol {
+    flex-direction: column;
+  }
+
+  .topicCards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .designerFlexContainer {
+    flex-direction: column;
   }
 }

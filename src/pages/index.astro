@@ -6,38 +6,38 @@ import ItemCard from "../components/ItemCard.astro";
 const itemsData = [
   {
     imageSrc: "/assets/items1.png",
-    title: "laboris nisi ut aliquip",
+    title: "nulla pariatur",
     items: [
       "laboris nisi ut aliquip",
-      "laboris nisi ut aliquip",
-      "laboris nisi ut aliquip",
+      "Lorem Ipsum",
+      "reprehenderit in voluptate",
     ],
   },
   {
     imageSrc: "/assets/items2.png",
-    title: "Lorem Ipsum",
+    title: "Ut enim ad minim veniam",
     items: [
-      "laboris nisi ut aliquip",
-      "laboris nisi ut aliquip",
+      "Lorem Ipsum",
+      "reprehenderit in voluptate",
       "laboris nisi ut aliquip",
     ],
   },
   {
     imageSrc: "/assets/items3.png",
-    title: "reprehenderit in voluptate",
+    title: "Ut enim ad minim veniam",
     items: [
-      "laboris nisi ut aliquip",
-      "laboris nisi ut aliquip",
+      "Lorem Ipsump",
+      "reprehenderit in voluptate",
       "laboris nisi ut aliquip",
     ],
   },
   {
     imageSrc: "/assets/items4.png",
-    title: "Lorem ipsum",
+    title: "nulla pariatur",
     items: [
       "laboris nisi ut aliquip",
-      "laboris nisi ut aliquip",
-      "laboris nisi ut aliquip",
+      "Lorem Ipsum",
+      "reprehenderit in voluptate",
     ],
   },
 ];
@@ -45,39 +45,57 @@ const itemsData = [
 
 <Layout title="ファッション・インテリア">
   <div class="site-root">
-    <header class="nav">
-      <div class="nav-item">MENU</div>
-      <img class="" src="/assets/logo.svg" alt="logo" />
-      <div class="nav-item">ONLINE SHOP</div>
+    <header class="nav pc">
+      <div class="nav-item">
+        <a href="">MENU</a>
+      </div>
+      <a href=""><img src="/assets/logo.svg" alt="logo" /></a>
+      <div class="nav-item">
+        <a href="">ONLINE SHOP</a>
+      </div>
+    </header>
+
+    <header class="nav sp">
+      <a href=""><img src="/assets/logo.svg" alt="logo" /></a>
+      <div class="nav-items-mobile">
+        <div class="nav-item">
+          <a href="">MENU</a>
+        </div>
+        <div class="nav-item">
+          <a href="">ONLINE SHOP</a>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero-landing">
         <div class="hero-inner overflow-hidden mt-[110px]">
-          <ul class={styles.siderImage}>
-            <li><img src="/assets/hero_img1.png" alt="left" /></li>
-            <li><img src="/assets/hero_img2.png" alt="center" /></li>
-            <li><img src="/assets/hero_img3.png" alt="right" /></li>
-          </ul>
+          <div class={styles.siderImage}>
+            <img class="w-full" src="/assets/hero_img1.png" alt="left" />
+            <img class="w-full" src="/assets/hero_img2.png" alt="center" />
+            <img class="w-full" src="/assets/hero_img3.png" alt="right" />
+          </div>
         </div>
         <div class="hero-big-text">Lorem Ipsum</div>
-        <p class="text-center mt-[30px]">consectetur adipisicing elit</p>
+        <p class="text-center mt-[30px]! text-[18px]!">
+          consectetur adipisicing elit
+        </p>
       </section>
 
       <section class="about-concept py-[90px] px-[10%]">
         <div class="">
-          <div class="two-col" style="margin-top:24px">
-            <div class="w-[60%] relative">
-              <p class="text-[90px] text-[#fff] absolute z-20">
+          <div class={styles.twoCol}>
+            <div class="w-full relative md:w-[60%]">
+              <p class="text-[90px] text-white absolute z-20">
                 Lorem<br />
                 Ipsum
               </p>
               <img
-                class="w-[100%] relative z-10"
+                class="w-full relative z-10"
                 src="/assets/about_img.png"
                 alt="about image"
               />
-              <div class="ellipse absolute top-[0px] z-1"></div>
+              <div class="ellipse absolute top-0 z-1"></div>
 
               <style>
                 .ellipse {
@@ -93,7 +111,7 @@ const itemsData = [
               </style>
             </div>
 
-            <div class="w-[40%]">
+            <div class="w-full md:w-[40%]">
               <h2
                 class={styles.sectionSubtitle}
                 style="color:var(--muted);font-size:18px;"
@@ -101,10 +119,13 @@ const itemsData = [
                 ABOUT
               </h2>
               <h3 class="heading-xl">dolore eu<br />fugiat nulla</h3>
-              <p class="copy">
+              <p class="copy w-full mt-[35px]!">
                 山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。
               </p>
-              <button class={` ${styles.transitionButton}`}>
+              <button
+                class={`${styles.transitionButton}`}
+                onclick="window.location.href='#about'"
+              >
                 <img src="/assets/arrow.svg" alt="" />
               </button>
             </div>
@@ -112,8 +133,8 @@ const itemsData = [
         </div>
 
         <div class="">
-          <div class="two-col" style="margin-top:24px">
-            <div class="w-[40%]">
+          <div class={styles.twoCol} style="margin-top:24px">
+            <div class="w-full md:w-[40%]">
               <h2
                 class={styles.sectionSubtitle}
                 style="color:var(--muted);font-size:18px;"
@@ -123,32 +144,35 @@ const itemsData = [
               <h3 class="heading-xl">
                 dolore eu<br />fugiat nulla
               </h3>
-              <p class="copy">
+              <p class="copy mt-[35px]!">
                 山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。
               </p>
-              <button class={` ${styles.transitionButton}`}>
+              <button
+                class={` ${styles.transitionButton}`}
+                onclick="window.location.href='/page'"
+              >
                 <img src="/assets/arrow.svg" alt="" />
               </button>
             </div>
 
-            <div class="w-[60%] relative flex justify-end">
-              <p class="text-[90px] text-[#fff] absolute z-20">
+            <div class="w-full md:w-[60%] relative flex justify-end">
+              <p class="text-[90px] text-white absolute z-20">
                 Lorem<br />
                 Ipsum
               </p>
               <img
-                class="w-[100%] relative z-10"
+                class="w-full relative z-10"
                 src="/assets/concept_img.png"
                 alt="concept image"
               />
-              <div class="ellipse absolute top-[0px] z-1"></div>
+              <div class="ellipse2 absolute top-[5px] right-[-30px]"></div>
 
               <style>
-                .ellipse {
-                  max-width: 80%;
+                .ellipse2 {
+                  max-width: 100%;
                   max-height: 100%;
                   width: 500px;
-                  height: 600px;
+                  height: 500px;
                   transform: rotate(60deg);
                   opacity: 0.4;
                   background: #fff;
@@ -160,16 +184,25 @@ const itemsData = [
         </div>
       </section>
 
-      <section class="items pb-[180px]">
+      <section class="items py-[180px] overflow-hidden">
         <div class="text-center">
           <div class="relative">
             <!-- 円を背景に配置 -->
             <div class={styles.itemsCircle} aria-hidden="true"></div>
             <!-- テキストを前面に配置 -->
-            <h1 class="text-[135px] relative z-10">Lorem Ipsum</h1>
-            <h2 class="text-[105px] relative z-10">
+            <h1 class={`text-[135px] relative z-10 ${styles.itemsMainTitle}`}>
+              Lorem Ipsum
+            </h1>
+            <h2 class={`text-[105px] relative z-10 ${styles.itemsSubtitle}`}>
               consectetur adipisicing elit
             </h2>
+          </div>
+
+          <div
+            class="text-right text-[60px]! md:text-[90px]! px-[10%] mt-[130px]"
+          >
+            Lorem <br />
+            Ipsum
           </div>
 
           <div class={`px-[10%] ${styles.itemsList}`}>
@@ -186,14 +219,14 @@ const itemsData = [
         </div>
       </section>
 
-      <section class="designer py-[180px]">
+      <section class="designer py-[180px]" id="about">
         <div class="">
           <div class={`relative overflow-hidden  ${styles.first}`}>
             <div class={`absolute ${styles.designerTitleContainer}`}>
               <h1 class={styles.designerTitle}>Lorem Ipsum</h1>
               <h1 class={styles.designerTitle}>Lorem Ipsum</h1>
             </div>
-            <div class="px-[10%] flex items-end">
+            <div class={`px-[10%] ${styles.designerFlexContainer}`}>
               <div class={`relative  ${styles.designerPhoto}`}>
                 <img src="/assets/loop.png" alt="" class={styles.loopImage} />
                 <img
@@ -203,13 +236,13 @@ const itemsData = [
                 />
               </div>
               <div class="bio">
-                <p>
-                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。
-                </p>
                 <p class="name">
                   <span style="font-weight:500;font-size:18px">斎藤 ミア</span>
                   <span>/</span>
                   <span style="font-weight:500;font-size:15px">MIA SAITO</span>
+                </p>
+                <p class="text-[14px]">
+                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。
                 </p>
               </div>
             </div>
@@ -222,13 +255,15 @@ const itemsData = [
               <div class={styles.topicsTitleContainer}>
                 <h3 class={styles.topicsTitle}>TOPICS</h3>
               </div>
-              <div class="topic-cards">
+              <div class={styles.topicCards}>
                 <div class="topic-card">
                   <div class="topic-image">
                     <img src="/assets/topic1.png" alt="topic 1" />
                   </div>
-                  <h4 class="topic-name">consectetur adipisicing</h4>
-                  <p class="topic-desc">
+                  <h4 class="topic-name text-[16px]!">
+                    consectetur adipisicing
+                  </h4>
+                  <p class="topic-desc text-[15px]!">
                     山路を登りながら、こう考えた。智に働けば角が立つ。
                   </p>
                 </div>
@@ -236,8 +271,8 @@ const itemsData = [
                   <div class="topic-image">
                     <img src="/assets/topic2.png" alt="topic 2" />
                   </div>
-                  <h4 class="topic-name">consectetur</h4>
-                  <p class="topic-desc">
+                  <h4 class="topic-name text-[16px]!">consectetur</h4>
+                  <p class="topic-desc text-[15px]!">
                     山路を登りながら、こう考えた。智に働けば角が立つ。
                   </p>
                 </div>
@@ -245,15 +280,18 @@ const itemsData = [
                   <div class="topic-image">
                     <img src="/assets/topic3.png" alt="topic 3" />
                   </div>
-                  <h4 class="topic-name">commodo consequat</h4>
-                  <p class="topic-desc">
+                  <h4 class="topic-name text-[16px]!">commodo consequat</h4>
+                  <p class="topic-desc text-[15px]!">
                     山路を登りながら、こう考えた。智に働けば角が立つ。
                   </p>
                 </div>
               </div>
               <div class={styles.topicBottom}>
-                <button class={` ${styles.transitionButton2}`}>
-                  <img src="/assets/arrow.svg" alt="" />
+                <button
+                  class={` ${styles.transitionButton2}`}
+                  onclick="window.location.href='/page'"
+                >
+                  <img src="/assets/arrow-w.svg" alt="" />
                 </button>
               </div>
             </div>
@@ -293,21 +331,21 @@ const itemsData = [
         </div>
       </section>
 
-      <section class="contact pt-[108px] px-[10%] pb-[70px] !h-fit">
-        <div class={`flex flex-col w-[100%] !h-fit ${styles.first}`}>
+      <section class="contact pt-[108px] px-[10%] pb-[70px] h-fit!">
+        <div class={`flex flex-col w-full h-fit! ${styles.first}`}>
           <div class="contact-inner">
             <div class={styles.contactLeft}>
               <img class="" src="/assets/logo.svg" alt="logo" />
               <nav class="foot-nav flex gap-[30px] mt-[30px]">
-                <div>ABOUT</div>
-                <div>CONCEPT</div>
-                <div>ITEMS</div>
+                <div><a href="">ABOUT</a></div>
+                <div><a href="">CONCEPT</a></div>
+                <div><a href="">ITEMS</a></div>
               </nav>
             </div>
             <div class="right">
-              <h2>Lorem ipsum<br />dolor sit<br />amet</h2>
+              <h2 class="text-left">Lorem ipsum<br />dolor sit<br />amet</h2>
               <div
-                class="mt-[12px] flex justify-between border-b border-[var(--accent)] pb-[10px]"
+                class="mt-[12px] flex justify-between border-b border-(--accent) pb-[10px]"
               >
                 <p class="my-0 mb-2">CONTACT</p>
                 <img class="w-[20px]" src="/assets/arrow.svg" alt="" />
@@ -316,7 +354,7 @@ const itemsData = [
           </div>
           <div class={styles.second}>
             <footer>
-              <p class="text-right mt-[74px]">©webdesign pro</p>
+              <p class="text-right mt-[74px]!">©webdesign pro</p>
             </footer>
           </div>
         </div>
