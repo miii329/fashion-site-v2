@@ -46,16 +46,24 @@ const itemsData = [
 <Layout title="ファッション・インテリア">
   <div class="site-root">
     <header class="nav pc">
-      <div class="nav-item">MENU</div>
-      <img src="/assets/logo.svg" alt="logo" />
-      <div class="nav-item">ONLINE SHOP</div>
+      <div class="nav-item">
+        <a href="">MENU</a>
+      </div>
+      <a href=""><img src="/assets/logo.svg" alt="logo" /></a>
+      <div class="nav-item">
+        <a href="">ONLINE SHOP</a>
+      </div>
     </header>
 
     <header class="nav sp">
-      <img src="/assets/logo.svg" alt="logo" />
+      <a href=""><img src="/assets/logo.svg" alt="logo" /></a>
       <div class="nav-items-mobile">
-        <div class="nav-item">MENU</div>
-        <div class="nav-item">ONLINE SHOP</div>
+        <div class="nav-item">
+          <a href="">MENU</a>
+        </div>
+        <div class="nav-item">
+          <a href="">ONLINE SHOP</a>
+        </div>
       </div>
     </header>
 
@@ -112,7 +120,10 @@ const itemsData = [
               <p class="copy w-full">
                 山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。
               </p>
-              <button class={` ${styles.transitionButton}`}>
+              <button
+                class={`${styles.transitionButton}`}
+                onclick="window.location.href='#about'"
+              >
                 <img src="/assets/arrow.svg" alt="" />
               </button>
             </div>
@@ -134,7 +145,10 @@ const itemsData = [
               <p class="copy">
                 山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。住みにくさが高じると、安い所へ引き越したくなる。
               </p>
-              <button class={` ${styles.transitionButton}`}>
+              <button
+                class={` ${styles.transitionButton}`}
+                onclick="window.location.href='/page'"
+              >
                 <img src="/assets/arrow.svg" alt="" />
               </button>
             </div>
@@ -196,7 +210,7 @@ const itemsData = [
         </div>
       </section>
 
-      <section class="designer py-[180px]">
+      <section class="designer py-[180px]" id="about">
         <div class="">
           <div class={`relative overflow-hidden  ${styles.first}`}>
             <div class={`absolute ${styles.designerTitleContainer}`}>
@@ -262,7 +276,10 @@ const itemsData = [
                 </div>
               </div>
               <div class={styles.topicBottom}>
-                <button class={` ${styles.transitionButton2}`}>
+                <button
+                  class={` ${styles.transitionButton2}`}
+                  onclick="window.location.href='/page'"
+                >
                   <img src="/assets/arrow-w.svg" alt="" />
                 </button>
               </div>
@@ -309,9 +326,9 @@ const itemsData = [
             <div class={styles.contactLeft}>
               <img class="" src="/assets/logo.svg" alt="logo" />
               <nav class="foot-nav flex gap-[30px] mt-[30px]">
-                <div>ABOUT</div>
-                <div>CONCEPT</div>
-                <div>ITEMS</div>
+                <div><a href="">ABOUT</a></div>
+                <div><a href="">CONCEPT</a></div>
+                <div><a href="">ITEMS</a></div>
               </nav>
             </div>
             <div class="right">
