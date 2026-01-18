@@ -162,6 +162,7 @@
   display: flex;
   gap: 350px;
   animation: slideSlider 15s ease-in-out infinite;
+  overflow: hidden;
 }
 
 @keyframes slideSlider {
