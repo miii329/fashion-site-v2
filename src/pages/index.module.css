@@ -161,16 +161,25 @@
 .siderImage {
   display: flex;
   gap: 350px;
-  animation: slideSlider 15s ease-in-out infinite;
+  animation: slideSlider 30s linear infinite;
+  overflow: hidden;
+  width: max-content;
+}
+
+.siderImage img {
+  transition: transform 0.3s ease;
+}
+
+.siderImage img:hover {
+  transform: scale(1.05);
 }
 
 @keyframes slideSlider {
-  0%,
-  100% {
+  0% {
     transform: translateX(0);
   }
-  50% {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(-66.66%);
   }
 }
 
