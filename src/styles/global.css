@@ -109,6 +109,18 @@ body {
   font-size: 16px;
 }
 
+.nav .nav-item a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-item a:hover {
+  opacity: 0.7;
+}
+
 /* Hero */
 .hero {
   background: #ede7c6;
@@ -151,7 +163,6 @@ body {
   padding: 40px 0 120px;
 }
 .hero-landing .hero-inner {
-  max-width: var(--max-width);
   display: grid;
   align-items: center;
   gap: 24px;
