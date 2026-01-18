@@ -20,4 +20,6 @@ export default defineConfig({
   },
 
   adapter: vercel(),
+
+  site: "https://your-fashion-site.vercel.app",
 });
