@@ -21,5 +21,5 @@ export default defineConfig({
 
   adapter: vercel(),
 
-  site: "https://your-fashion-site.vercel.app",
+  site: "https://fashion-site-v2.vercel.app/",
 });
