@@ -161,7 +161,7 @@
 .siderImage {
   display: flex;
   gap: 350px;
-  animation: slideSlider 18s linear infinite;
+  animation: slideSlider 30s linear infinite;
   overflow: hidden;
   width: max-content;
 }
